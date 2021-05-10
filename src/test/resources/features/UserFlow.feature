@@ -2,10 +2,10 @@ Feature: Basic Api Functionalities
 
   @wip
   Scenario: User flow
-    When I create new user with given data: name as "Tim",gender as "Male",email as "tim2@gmail.com",status as "Active"
+    Given I create new user with given data: name as "Tim",gender as "Male",email as "tim3@gmail.com",status as "Active"
     Then Status code should be 201
     And Content-type should be "application/json"
-    And Response should match with following inputs: name with "Tim",gender with "Male",email with "tim2@gmail.com",status with "Active"
+    And Response should match with following inputs: name with "Tim",gender with "Male",email with "tim3@gmail.com",status with "Active"
     And Response Name should be "Tim"
     When I rename the user as "joey"
     Then Status code should be 200
